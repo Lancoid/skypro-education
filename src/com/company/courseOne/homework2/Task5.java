@@ -1,6 +1,6 @@
 package com.company.courseOne.homework2;
 
-/**
+/*
  * Представим, что мы работаем в большой компании, штат которой состоит из нескольких сотен сотрудников.
  * В компании есть правило, что чем дольше сотрудник работает в компании, тем ценнее он для бизнеса.
  * Поэтому сотрудники, которые работают в компании дольше 3 лет, получают повышение зарплаты раз в год.
@@ -27,16 +27,19 @@ public class Task5
         int mariaSalaryOld = 67_760;
         int mariaSalaryNew = getNewSalary(mariaSalaryOld, salaryIncreasePercentage);
         int mariaDifferenceAnnualSalaries = (mariaSalaryNew * 12) - (mariaSalaryOld * 12);
+
         System.out.println("Маша теперь получает " + mariaSalaryNew + " рублей. Годовой доход вырос на " + mariaDifferenceAnnualSalaries + " рублей");
 
         int denisSalaryOld = 83_690;
         int denisSalaryNew = getNewSalary(denisSalaryOld, salaryIncreasePercentage);
         int denisDifferenceAnnualSalaries = (denisSalaryNew * 12) - (denisSalaryOld * 12);
+
         System.out.println("Денис теперь получает " + denisSalaryNew + " рублей. Годовой доход вырос на " + denisDifferenceAnnualSalaries + " рублей");
 
         int kristinaSalaryOld = 76_230;
         int kristinaSalaryNew = getNewSalary(kristinaSalaryOld, salaryIncreasePercentage);
         int kristinaDifferenceAnnualSalaries = (kristinaSalaryNew * 12) - (kristinaSalaryOld * 12);
+
         System.out.println("Кристина теперь получает " + kristinaSalaryNew + " рублей. Годовой доход вырос на " + kristinaDifferenceAnnualSalaries + " рублей");
     }
 
