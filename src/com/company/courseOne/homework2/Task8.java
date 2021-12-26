@@ -21,7 +21,7 @@ public class Task8
         int b;
 
         System.out.println("Переменная `a` = " + a);
-        System.out.println("Переменная `b` не инициализирована");
+        System.out.println("Переменная `b` объявлена, но не инициализирована");
 
         int hundredsSeparator = a / 100;
         int tensSeparator = (a - (100 * hundredsSeparator)) / 10;
@@ -29,7 +29,7 @@ public class Task8
         System.out.println("В переменной `a` " + hundredsSeparator + " сотни(сотен)");
         System.out.println("В переменной `a` " + tensSeparator + " десяток(десятков)");
 
-        System.out.println("Инициализируем переменную `b` значением переменной " + tensSeparator);
+        System.out.println("Инициализируем переменную `b` значением количества десятков в переменной `a`");
 
         b = tensSeparator;
 
