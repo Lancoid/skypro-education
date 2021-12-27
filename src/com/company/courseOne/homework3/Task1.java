@@ -18,7 +18,7 @@ package com.company.courseOne.homework3;
  */
 public class Task1
 {
-    private static final float IOS = 0;
+    private static final int IOS = 0;
     private static final int ANDROID = 1;
 
     public static void main(String[] args)
