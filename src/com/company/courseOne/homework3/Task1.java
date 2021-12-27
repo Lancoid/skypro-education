@@ -23,7 +23,7 @@ public class Task1
 
     public static void main(String[] args)
     {
-        float clientOS = 1;
+        int clientOS = 1;
 
         if (clientOS == IOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
