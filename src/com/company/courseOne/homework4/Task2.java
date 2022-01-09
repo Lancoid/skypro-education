@@ -21,7 +21,7 @@ public class Task2
         for (int counter = 0; counter < 10; counter++) {
             day = firstFridayInMonth + (counter * 7);
 
-            if (day > 32) {
+            if (day > 31) {
                 break;
             }
 
