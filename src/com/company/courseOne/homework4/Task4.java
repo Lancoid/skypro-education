@@ -12,20 +12,23 @@ public class Task4
     {
         boolean isDivisibleByThree;
         boolean isDivisibleByFive;
+        StringBuilder result;
 
         for (int counter = 1; counter <= 30; counter++) {
             isDivisibleByThree = counter % 3 == 0;
             isDivisibleByFive = counter % 5 == 0;
 
-            if (isDivisibleByThree && isDivisibleByFive) {
-                System.out.println(counter + ": ping pong");
-            } else if (isDivisibleByFive) {
-                System.out.println(counter + ": pong");
-            } else if (isDivisibleByThree) {
-                System.out.println(counter + ": ping");
-            } else {
-                System.out.println(counter + ":");
+            result = new StringBuilder();
+            result.append(counter).append(":");
+
+            if (isDivisibleByThree) {
+                result.append(" ping");
             }
+            if (isDivisibleByFive) {
+                result.append(" pong");
+            }
+
+            System.out.println(result);
         }
     }
 }

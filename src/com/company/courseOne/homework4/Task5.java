@@ -15,29 +15,22 @@ public class Task5
     {
         int firstNumber = 0;
         int secondNumber = 1;
-        int counter = 2;
+        StringBuilder result = new StringBuilder();
 
-        System.out.print(firstNumber);
-        System.out.print(" ");
-        System.out.print(secondNumber);
+        result.append(firstNumber).append(" ").append(secondNumber);
 
         int currentNumber = 1;
 
-        while (true) {
+        for (int counter = 2; counter < 10; currentNumber++) {
             if (currentNumber == firstNumber + secondNumber) {
-                System.out.print(" ");
-                System.out.print(currentNumber);
+                result.append(" ").append(currentNumber);
 
                 firstNumber = secondNumber;
                 secondNumber = currentNumber;
                 counter++;
             }
-
-            if (counter == 10) {
-                break;
-            }
-
-            currentNumber++;
         }
+
+        System.out.println(result);
     }
 }
