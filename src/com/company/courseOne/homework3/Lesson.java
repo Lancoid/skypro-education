@@ -175,7 +175,8 @@ public class Lesson
                 System.out.println("В месяце под номером " + monthNumber + " 30 дней.");
                 break;
             case 2:
-                if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0)) {
+                boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+                if (isLeapYear) {
                     System.out.println("В месяце под номером " + monthNumber + " 29 дней.");
                 } else {
                     System.out.println("В месяце под номером " + monthNumber + " 28 дней.");
