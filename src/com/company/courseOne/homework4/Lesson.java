@@ -5,6 +5,7 @@ package com.company.courseOne.homework4;
  * Оператор break
  * Оператор continue
  */
+@SuppressWarnings({"ForLoopReplaceableByWhile", "ConditionalBreakInInfiniteLoop", "ConstantConditions"})
 public class Lesson
 {
     public static void main(String[] args)
@@ -19,10 +20,9 @@ public class Lesson
          *
          * Выглядит следующим образом:
          *
-         * for(инициализация; логическое выражение (условие); шаг (итерация))
+         * for(инициализация; логическое выражение (условие); шаг (итерация)) {
          *     команда
-         *
-         *
+         * }
          */
 
         for (int a = 0; a <= 9; a++) {
@@ -70,6 +70,7 @@ public class Lesson
          * Оператор цикла while повторяет оператор или блок операторов до тех пор, пока значение его управляющего выражения истинно.
          *
          * Форма цикла while следующая:
+         *
          * while(условие) {
          *     // тело цикла
          * }
@@ -100,6 +101,7 @@ public class Lesson
          * Цикл do-while используется реже, чем while.
          *
          * Форма цикла do-while следующая:
+         *
          * do {
          *     // команда (тело цикла)
          * } while (условие-логическое выражение)

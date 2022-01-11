@@ -16,6 +16,7 @@ package com.company.courseOne.homework3;
  * А для Android так:
  * «Установите версию приложения для Android по ссылке».
  */
+@SuppressWarnings("ConstantConditions")
 public class Task1
 {
     private static final int IOS = 0;

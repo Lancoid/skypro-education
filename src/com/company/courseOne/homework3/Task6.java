@@ -19,6 +19,7 @@ package com.company.courseOne.homework3;
  * Увеличения не могут быть применены одновременно.
  * Необходимо вывести максимальный лимит в консоль в формате: «Мы готовы выдать вам кредитную карту с лимитом *** рублей».
  */
+@SuppressWarnings("ConstantConditions")
 public class Task6
 {
     public static void main(String[] args)

@@ -21,6 +21,7 @@ package com.company.courseOne.homework3;
  *
  * 💡 Вложенность больше двух этажей не допускается (условный оператор внутри условного оператора).
  */
+@SuppressWarnings("ConstantConditions")
 public class Task2
 {
     private static final int IOS = 0;

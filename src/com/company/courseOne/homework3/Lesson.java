@@ -6,6 +6,7 @@ package com.company.courseOne.homework3;
  * Логические операторы
  * Switch
  */
+@SuppressWarnings({"ConstantConditions", "EnhancedSwitchMigration"})
 public class Lesson
 {
     public static void main(String[] args)
@@ -166,21 +167,17 @@ public class Lesson
             case 8:
             case 10:
             case 12:
-                System.out.println("В месяце под номером " + monthNumber + " 31 день.");
+                System.out.println(year + "/" + monthNumber + " - 31 день.");
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                System.out.println("В месяце под номером " + monthNumber + " 30 дней.");
+                System.out.println(year + "/" + monthNumber + " - 30 дней.");
                 break;
             case 2:
                 boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
-                if (isLeapYear) {
-                    System.out.println("В месяце под номером " + monthNumber + " 29 дней.");
-                } else {
-                    System.out.println("В месяце под номером " + monthNumber + " 28 дней.");
-                }
+                System.out.println(year + "/" + monthNumber + " - " + (isLeapYear ? 29 : 28) + " дней.");
                 break;
             default:
                 System.out.println("Несуществующий месяц");
