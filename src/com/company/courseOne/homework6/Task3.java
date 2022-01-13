@@ -1,5 +1,7 @@
 package com.company.courseOne.homework6;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 /**
  * А теперь нам нужно понять, какую в среднем сумму наша компания тратила в течение данных 30 дней.
  *
@@ -7,11 +9,9 @@ package com.company.courseOne.homework6;
  * (то есть сумму всех трат за месяц поделить на количество дней),
  * и вывести в консоль результат в формате: «Средняя сумма трат за месяц составила … рублей».
  */
-public class Task3 extends Task0
-{
-    public static void main(String[] args)
-    {
-        generateRandomNumbersArray();
+public class Task3 {
+    public static void main(String[] args) {
+        int[] randomNumbersArray = ArrayGenerator.generateRandomNumbers(30, 100_000, 200_000);
 
         int totalSum = 0;
 

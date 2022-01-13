@@ -1,5 +1,7 @@
 package com.company.courseOne.homework6;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 /**
  * Следующая задача — найти минимальную и максимальную трату за день.
  *
@@ -7,11 +9,9 @@ package com.company.courseOne.homework6;
  * и вывести в консоль результат в формате:
  * «Минимальная сумма трат за день составила … рублей. Максимальная сумма трат за день составила … рублей».
  */
-public class Task2 extends Task0
-{
-    public static void main(String[] args)
-    {
-        generateRandomNumbersArray();
+public class Task2 {
+    public static void main(String[] args) {
+        int[] randomNumbersArray = ArrayGenerator.generateRandomNumbers(30, 100_000, 200_000);
 
         int minimumExpensesPerDay = 0;
         int maximumExpensesPerDay = 0;

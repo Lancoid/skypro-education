@@ -19,10 +19,8 @@ package com.company.courseOne.homework6;
  * 💡 **Важно**: не используйте дополнительные массивы для решения этой задачи.
  * Необходимо корректно пройти по массиву циклом и распечатать его элементы в правильном порядке.
  */
-public class Task4
-{
-    public static void main(String[] args)
-    {
+public class Task4 {
+    public static void main(String[] args) {
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
         StringBuilder result = new StringBuilder();
