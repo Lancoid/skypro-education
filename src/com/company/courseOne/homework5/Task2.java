@@ -1,14 +1,16 @@
 package com.company.courseOne.homework5;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 /**
  * Пройдите по каждому из трех массивов и распечатайте все элементы всех трех массивов, начиная с первого элемента, через запятую.
  * Запятая между последним элементом одного массива и первым элементом следующего не нужна.
  */
-public class Task2 extends Task0 {
+public class Task2 {
     public static void main(String[] args) {
         /* *** Распечатка целочисленного массива в порядке от начала до конца *** */
 
-        int[] integerArray = getIntegerArray();
+        int[] integerArray = ArrayGenerator.getIntegerArray();
 
         for (int counter = 0; counter < integerArray.length; counter++) {
             if (counter != 0) {
@@ -22,7 +24,7 @@ public class Task2 extends Task0 {
 
         /* *** Распечатка массива чисел с плавающей точкой в порядке от начала до конца *** */
 
-        float[] floatArray = getFloatArray();
+        float[] floatArray = ArrayGenerator.getFloatArray();
 
         for (int counter = 0; counter < floatArray.length; counter++) {
             if (counter != 0) {
@@ -36,7 +38,7 @@ public class Task2 extends Task0 {
 
         /* *** Распечатка строкового массива в порядке от начала до конца *** */
 
-        String[] stringArray = getStringArray();
+        String[] stringArray = ArrayGenerator.getStringArray();
 
         for (int counter = 0; counter < stringArray.length; counter++) {
             if (counter != 0) {

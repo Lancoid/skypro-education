@@ -1,5 +1,7 @@
 package com.company.courseOne.homework5;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 import java.util.Arrays;
 
 /**
@@ -9,12 +11,12 @@ import java.util.Arrays;
  * 3. Произвольный массив – тип и количество данных определите сами.
  * Самостоятельно выберите способ создания массива: с помощью ключевого слова или сразу заполненный элементами.
  */
-public class Task1 extends Task0 {
+public class Task1 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getIntegerArray()));
+        System.out.println(Arrays.toString(ArrayGenerator.getIntegerArray()));
 
-        System.out.println(Arrays.toString(getFloatArray()));
+        System.out.println(Arrays.toString(ArrayGenerator.getFloatArray()));
 
-        System.out.println(Arrays.toString(getStringArray()));
+        System.out.println(Arrays.toString(ArrayGenerator.getStringArray()));
     }
 }

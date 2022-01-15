@@ -1,5 +1,7 @@
 package com.company.courseOne.homework5;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 /**
  * Теперь ваша задача – распечатать все элементы всех трех массивов, но начинать нужно не с первого элемента массива, а с последнего.
  * Элементы должны быть распечатаны через запятую, при этом элементы одного массива располагаются на одной строчке, а элементы другого массива – на другой.
@@ -16,15 +18,15 @@ package com.company.courseOne.homework5;
  * 9.986, 7.654, 1.57
  * *произвольные элементы третьего массива в обратном порядке*
  */
-public class Task3 extends Task0 {
+public class Task3 {
     public static void main(String[] args) {
-        int[] integerArray = getIntegerArray();
+        int[] integerArray = ArrayGenerator.getIntegerArray();
         int integerArrayLastKey = integerArray.length - 1;
 
-        float[] floatArray = getFloatArray();
+        float[] floatArray = ArrayGenerator.getFloatArray();
         int floatArrayLastKey = floatArray.length - 1;
 
-        String[] stringArray = getStringArray();
+        String[] stringArray = ArrayGenerator.getStringArray();
         int stringArrayLastKey = stringArray.length - 1;
 
         /* *** Распечатка целочисленного массива в порядке от конца до начала *** */

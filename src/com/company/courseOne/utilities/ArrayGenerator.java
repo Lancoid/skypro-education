@@ -3,6 +3,24 @@ package com.company.courseOne.utilities;
 import java.util.Random;
 
 public class ArrayGenerator {
+    public static int[] getIntegerArray() {
+        return new int[]{1, 2, 3};
+    }
+
+    public static float[] getFloatArray() {
+        return new float[]{1.57f, 7.654f, 9.986f};
+    }
+
+    public static String[] getStringArray() {
+        String[] result = new String[4];
+
+        result[0] = "first_key_value";
+        result[1] = "second_key_value";
+        result[2] = "third_key_value";
+
+        return result;
+    }
+
     /**
      * Представим, что вы работаете в небольшой компании.
      *

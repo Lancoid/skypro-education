@@ -1,5 +1,7 @@
 package com.company.courseOne.homework5;
 
+import com.company.courseOne.utilities.ArrayGenerator;
+
 /**
  * Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
  *
@@ -7,9 +9,9 @@ package com.company.courseOne.homework5;
  *
  * Распечатайте результат преобразования в консоль.
  */
-public class Task4 extends Task0 {
+public class Task4 {
     public static void main(String[] args) {
-        int[] integerArray = getIntegerArray();
+        int[] integerArray = ArrayGenerator.getIntegerArray();
 
         for (int counter = 0; counter < integerArray.length; counter++) {
             if (integerArray[counter] % 2 != 0) {
