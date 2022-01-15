@@ -13,10 +13,8 @@ package com.company.courseOne.homework2;
  * Это значит, что рассчитать в голове сумму, которую необходимо вычесть или прибавить к a для корректного значения в b нельзя,
  * так как при каждом изменении значения в a её нужно пересчитывать.
  */
-public class Task8
-{
-    public static void main(String[] args)
-    {
+public class Task8 {
+    public static void main(String[] args) {
         int a = 256;
         int b;
 

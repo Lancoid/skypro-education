@@ -8,10 +8,8 @@ package com.company.courseOne.homework2;
  *
  * Выведите (напечатайте) результат в консоль.
  */
-public class Task6
-{
-    public static void main(String[] args)
-    {
+public class Task6 {
+    public static void main(String[] args) {
         int a = 12;
         int b = 27;
         int c = 44;

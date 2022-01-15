@@ -6,10 +6,8 @@ package com.company.courseOne.homework4;
  * 2 - если число делится на 5 без остатка, вывести pong
  * 3 - если число делится без остатка и на 3, и на 5, необходимо вывести ping pong
  */
-public class Task4
-{
-    public static void main(String[] args)
-    {
+public class Task4 {
+    public static void main(String[] args) {
         boolean isDivisibleByThree;
         boolean isDivisibleByFive;
         StringBuilder result;

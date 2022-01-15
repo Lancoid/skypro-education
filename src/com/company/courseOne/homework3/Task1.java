@@ -17,13 +17,11 @@ package com.company.courseOne.homework3;
  * «Установите версию приложения для Android по ссылке».
  */
 @SuppressWarnings("ConstantConditions")
-public class Task1
-{
+public class Task1 {
     private static final int IOS = 0;
     private static final int ANDROID = 1;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int clientOS = 1;
 
         if (clientOS == IOS) {

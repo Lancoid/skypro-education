@@ -16,10 +16,8 @@ package com.company.courseOne.homework4;
  * 1975
  * 2054
  */
-public class Task3
-{
-    public static void main(String[] args)
-    {
+public class Task3 {
+    public static void main(String[] args) {
         int currentYear = 2022;
         int cometPeriod = 79;
         int counterPeriodStart = currentYear - 200;

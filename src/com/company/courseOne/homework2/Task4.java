@@ -9,17 +9,14 @@ package com.company.courseOne.homework2;
  *
  * Результаты подсчетов выведите в консоль.
  */
-public class Task4
-{
-    public static void main(String[] args)
-    {
+public class Task4 {
+    public static void main(String[] args) {
         int weightToLose = 7 * 1000;
         int minimumWeightToLosePerDay = 250;
         int maximumWeightToLosePerDay = 500;
 
         int maximumDays = weightToLose / minimumWeightToLosePerDay;
         int minimumDays = weightToLose / maximumWeightToLosePerDay;
-
 
         System.out.println("На похудение, если спортсмен будет терять каждый день по " + minimumWeightToLosePerDay + " грамм, уйдёт " + maximumDays + " день/дней.");
         System.out.println("На похудение, если спортсмен будет терять каждый день по " + maximumWeightToLosePerDay + " грамм, уйдёт " + minimumDays + " день/дней.");

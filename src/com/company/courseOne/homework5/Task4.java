@@ -7,10 +7,8 @@ package com.company.courseOne.homework5;
  *
  * Распечатайте результат преобразования в консоль.
  */
-public class Task4 extends Task0
-{
-    public static void main(String[] args)
-    {
+public class Task4 extends Task0 {
+    public static void main(String[] args) {
         int[] integerArray = getIntegerArray();
 
         for (int counter = 0; counter < integerArray.length; counter++) {

@@ -10,10 +10,8 @@ package com.company.courseOne.homework3;
  * Небольшая справка: високосным является каждый четвертый год, но не является каждый сотый. Также високосным является каждый четырехсотый год.
  */
 @SuppressWarnings("ConstantConditions")
-public class Task3
-{
-    public static void main(String[] args)
-    {
+public class Task3 {
+    public static void main(String[] args) {
         int year = 2021;
 
         boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));

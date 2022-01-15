@@ -14,10 +14,8 @@ package com.company.courseOne.homework2;
  * Подсчитайте вес (количество грамм) такого спорт-завтрака, а затем переведите его в килограммы.
  * Результат напечатайте в консоль.
  */
-public class Task3
-{
-    public static void main(String[] args)
-    {
+public class Task3 {
+    public static void main(String[] args) {
         int bananaTotalVolume = 5;
         int bananaDimension = 1;
         int oneBananaDimensionWeight = 80;
@@ -44,8 +42,7 @@ public class Task3
         System.out.println("Вес спорт-завтрака - " + totalWeight / 1000 + " кг.");
     }
 
-    private static int getWight(int totalVolume, int dimension, int oneDimensionWeight)
-    {
+    private static int getWight(int totalVolume, int dimension, int oneDimensionWeight) {
         return (totalVolume / dimension) * oneDimensionWeight;
     }
 }

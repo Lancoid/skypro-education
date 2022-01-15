@@ -6,10 +6,8 @@ package com.company.courseOne.homework2;
  *
  * Использовать дополнительные переменные или числа запрещено.
  */
-public class Task7
-{
-    public static void main(String[] args)
-    {
+public class Task7 {
+    public static void main(String[] args) {
         int a = 5;
         int b = 7;
 

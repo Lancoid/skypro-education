@@ -4,10 +4,8 @@ package com.company.courseOne.homework5;
  * Пройдите по каждому из трех массивов и распечатайте все элементы всех трех массивов, начиная с первого элемента, через запятую.
  * Запятая между последним элементом одного массива и первым элементом следующего не нужна.
  */
-public class Task2 extends Task0
-{
-    public static void main(String[] args)
-    {
+public class Task2 extends Task0 {
+    public static void main(String[] args) {
         /* *** Распечатка целочисленного массива в порядке от начала до конца *** */
 
         int[] integerArray = getIntegerArray();

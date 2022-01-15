@@ -20,10 +20,8 @@ package com.company.courseOne.homework3;
  * Необходимо вывести максимальный лимит в консоль в формате: «Мы готовы выдать вам кредитную карту с лимитом *** рублей».
  */
 @SuppressWarnings("ConstantConditions")
-public class Task6
-{
-    public static void main(String[] args)
-    {
+public class Task6 {
+    public static void main(String[] args) {
         int age = 19;
         int salary = 58_000;
         float result;

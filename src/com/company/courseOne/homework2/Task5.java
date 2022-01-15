@@ -18,10 +18,8 @@ package com.company.courseOne.homework2;
  * Выведите в консоль информацию по каждому сотруднику.
  * Например, “Маша теперь получает **** рублей. Годовой доход вырос на **** рублей”.
  */
-public class Task5
-{
-    public static void main(String[] args)
-    {
+public class Task5 {
+    public static void main(String[] args) {
         int salaryIncreasePercentage = 10;
 
         int mariaSalaryOld = 67_760;
@@ -43,8 +41,7 @@ public class Task5
         System.out.println("Кристина теперь получает " + kristinaSalaryNew + " рублей. Годовой доход вырос на " + kristinaDifferenceAnnualSalaries + " рублей");
     }
 
-    private static int getNewSalary(float oldSalary, int increasePercentage)
-    {
+    private static int getNewSalary(float oldSalary, int increasePercentage) {
         return (int) (((float) (increasePercentage + 100) / 100) * oldSalary);
     }
 }

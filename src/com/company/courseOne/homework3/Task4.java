@@ -17,10 +17,8 @@ package com.company.courseOne.homework3;
  * Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
  */
 @SuppressWarnings("ConstantConditions")
-public class Task4
-{
-    public static void main(String[] args)
-    {
+public class Task4 {
+    public static void main(String[] args) {
         int deliveryTime = 1;
         int deliveryDistance = 95;
 

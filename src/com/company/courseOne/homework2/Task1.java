@@ -4,10 +4,8 @@ package com.company.courseOne.homework2;
  * Объявите переменные всех типов, что мы изучили на уроке,
  * и присвойте им любые значения (инициализируйте их).
  */
-public class Task1
-{
-    public static void main(String[] args)
-    {
+public class Task1 {
+    public static void main(String[] args) {
         byte byteVariable = 0;
         short shortVariable = 4;
         int intVariable = 123;

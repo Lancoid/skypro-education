@@ -5,10 +5,8 @@ package com.company.courseOne.homework2;
  * Операторы
  * Сокращённые операторы
  */
-public class Lesson
-{
-    public static void main(String[] args)
-    {
+public class Lesson {
+    public static void main(String[] args) {
         /*
          * Переменные
          *

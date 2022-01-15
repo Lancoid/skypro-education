@@ -7,10 +7,8 @@ package com.company.courseOne.homework3;
  * Switch
  */
 @SuppressWarnings({"ConstantConditions", "EnhancedSwitchMigration"})
-public class Lesson
-{
-    public static void main(String[] args)
-    {
+public class Lesson {
+    public static void main(String[] args) {
         /*
          * Условный оператор – специальное ключевое слово, которое позволяет выполнять разные блоки команд в зависимости от правдивости условия
          * -------------------------------------------------------------------------------------------------------------------------------------------

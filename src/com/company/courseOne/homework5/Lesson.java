@@ -4,10 +4,8 @@ package com.company.courseOne.homework5;
  * Массивы ч.1
  */
 @SuppressWarnings("ForLoopReplaceableByForEach")
-public class Lesson
-{
-    public static void main(String[] args)
-    {
+public class Lesson {
+    public static void main(String[] args) {
         /*
          * Перебор массивов
          */

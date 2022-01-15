@@ -22,13 +22,11 @@ package com.company.courseOne.homework3;
  * 💡 Вложенность больше двух этажей не допускается (условный оператор внутри условного оператора).
  */
 @SuppressWarnings("ConstantConditions")
-public class Task2
-{
+public class Task2 {
     private static final int IOS = 0;
     private static final int ANDROID = 1;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int clientOS = 1;
         int clientDeviceYear = 2005;
         boolean isLiteVersionNeeded = clientDeviceYear < 2015;

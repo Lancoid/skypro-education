@@ -25,10 +25,8 @@ package com.company.courseOne.homework3;
  * Пример ответа в консоль: «Максимальный платеж при ЗП *** равен *** рублей. Платеж по кредиту *** рублей. Одобрено/отказано».
  */
 @SuppressWarnings("ConstantConditions")
-public class Task7
-{
-    public static void main(String[] args)
-    {
+public class Task7 {
+    public static void main(String[] args) {
         int age = 25;
         int salary = 60_000;
         int wantedSum = 330_000;

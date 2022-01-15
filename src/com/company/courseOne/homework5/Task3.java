@@ -16,10 +16,8 @@ package com.company.courseOne.homework5;
  * 9.986, 7.654, 1.57
  * *произвольные элементы третьего массива в обратном порядке*
  */
-public class Task3 extends Task0
-{
-    public static void main(String[] args)
-    {
+public class Task3 extends Task0 {
+    public static void main(String[] args) {
         int[] integerArray = getIntegerArray();
         int integerArrayLastKey = integerArray.length - 1;
 

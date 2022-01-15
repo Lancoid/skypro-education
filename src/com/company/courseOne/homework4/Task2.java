@@ -11,10 +11,8 @@ package com.company.courseOne.homework4;
  * "Сегодня пятница, ...-е число. Необходимо подготовить отчет."
  * В нашем месяце 31 день. В результате у вас должно вывестись от 4 до 5 сообщений с напоминаниями по разным датам.
  */
-public class Task2
-{
-    public static void main(String[] args)
-    {
+public class Task2 {
+    public static void main(String[] args) {
         int firstFridayInMonth = 2;
         int day;
 

@@ -10,10 +10,8 @@ package com.company.courseOne.homework2;
  * Подсчитайте и выведите в консоль общий вес двух бойцов.
  * Подсчитайте и выведите в консоль разницу между весами бойцов.
  */
-public class Task2
-{
-    public static void main(String[] args)
-    {
+public class Task2 {
+    public static void main(String[] args) {
         float firstBoxerWeight = 78.2f;
         float secondBoxerWeight = 82.7f;
 

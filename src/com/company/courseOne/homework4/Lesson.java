@@ -6,10 +6,8 @@ package com.company.courseOne.homework4;
  * Оператор continue
  */
 @SuppressWarnings({"ForLoopReplaceableByWhile", "ConditionalBreakInInfiniteLoop", "ConstantConditions"})
-public class Lesson
-{
-    public static void main(String[] args)
-    {
+public class Lesson {
+    public static void main(String[] args) {
         /*
          * 💡 Цикл for
          *
