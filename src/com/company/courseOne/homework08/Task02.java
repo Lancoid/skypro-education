@@ -2,7 +2,7 @@ package com.company.courseOne.homework08;
 
 /**
  * Вспомним задание 2 по условным операторам, где нам необходимо было предложить пользователю облегченную версию приложения.
- * @see com.company.courseOne.homework3.Task02
+ * @see com.company.courseOne.homework03.Task02
  *
  * Напишите метод, куда подаются два параметра: тип операционной системы (ОС) (0 — iOS или 1 — Android) и год выпуска устройства.
  *
