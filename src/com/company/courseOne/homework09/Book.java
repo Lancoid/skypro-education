@@ -34,4 +34,8 @@ public class Book {
 
         return "Book: name = '" + name + "', Author = " + authorFio + "', year = " + year;
     }
+
+    public String getShortInfo() {
+        return author.getFirstName() + " " + author.getLastName() + ": " + name + ": " + year;
+    }
 }
