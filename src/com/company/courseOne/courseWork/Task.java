@@ -95,11 +95,11 @@ public class Task {
         System.out.println("----- Повышенная сложность - 3. Получить в качестве параметра число и найти:");
 
         System.out.println("-- Всех сотрудников с зарплатой меньше числа (вывести id, Ф. И. О. и зарплатой в консоль)");
-        employeeBook.findEmployeesBySalary(50000, true);
+        employeeBook.findEmployeesBySalaryLess(50000);
         System.out.println("-----");
 
         System.out.println("-- Всех сотрудников с зарплатой больше (или равно) числа (вывести id, Ф. И. О. и зарплатой в консоль)");
-        employeeBook.findEmployeesBySalary(50000, false);
+        employeeBook.findEmployeesBySalaryMoreOrEquals(50000);
         System.out.println("-----");
 
         /* **************************************************************************************************************************************** */
@@ -110,17 +110,15 @@ public class Task {
         System.out.println("-----");
 
         System.out.println("----- Очень сложно - 2. Удалить сотрудника (находим сотрудника по Ф. И. О. и/или id, обнуляем его ячейку в массиве)");
-        employeeBook.fireAnEmployee(11, "", "", "");
-        employeeBook.fireAnEmployee(null, "Александр", "Артёмович", "Ефимов");
+        employeeBook.fireAnEmployee("Александр", "Артёмович", "Ефимов");
         System.out.println("-----");
 
         System.out.println("----- Очень сложно - 3. Изменить зарплату сотрудника (получить сотрудника по ФИО, модернизировать его запись)");
-        employeeBook.changeEmployeeSalary(10, true, null, "Ясмина", "Артёмовна", "Дубова");
+        employeeBook.changeEmployeeSalary(10, true, "Ясмина", "Артёмовна", "Дубова");
         System.out.println("-----");
 
         System.out.println("----- Очень сложно - 4. Изменить отдел сотрудника (получить сотрудника по ФИО, модернизировать его запись)");
-        employeeBook.changeDepartment(EmployeeDepartment.PRODUCTION, 3, "", "", "");
-        employeeBook.changeDepartment(EmployeeDepartment.HUMAN_RESOURCES, null, "Анастасия", "Артёмовна", "Глушкова");
+        employeeBook.changeDepartment(EmployeeDepartment.HUMAN_RESOURCES, "Анастасия", "Артёмовна", "Глушкова");
         System.out.println("-----");
 
         System.out.println("----- Очень сложно - 5. Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников)");

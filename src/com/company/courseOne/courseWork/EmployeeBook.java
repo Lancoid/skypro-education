@@ -2,7 +2,6 @@ package com.company.courseOne.courseWork;
 
 public class EmployeeBook {
     private final Employee[] employees;
-    private Integer idCounter = 0;
 
     public EmployeeBook(int employeesCount) {
         employees = new Employee[employeesCount];
@@ -11,9 +10,7 @@ public class EmployeeBook {
     public void recruitEmployee(String firstName, String middleName, String lastName, EmployeeDepartment department, int salary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
-                ++idCounter;
-
-                employees[i] = new Employee(idCounter, firstName, middleName, lastName, department, salary);
+                employees[i] = new Employee(firstName, middleName, lastName, department, salary);
 
                 System.out.println("Сотрудник '" + employees[i].getFio() + "' нанят");
 
@@ -24,9 +21,9 @@ public class EmployeeBook {
         throw new RuntimeException("Книга сотрудников полная, расширяйте штат");
     }
 
-    public void fireAnEmployee(Integer id, String firstName, String middleName, String lastName) {
+    public void fireAnEmployee(String firstName, String middleName, String lastName) {
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null && checkEmployee(employees[i], id, firstName, middleName, lastName)) {
+            if (employees[i] != null && checkEmployee(employees[i], firstName, middleName, lastName)) {
                 String fio = employees[i].getFio();
                 employees[i] = null;
 
@@ -42,7 +39,7 @@ public class EmployeeBook {
     public void getAllEmployees(EmployeeDepartment department) {
         for (Employee employee : employees) {
             if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 System.out.println(employee);
@@ -55,7 +52,7 @@ public class EmployeeBook {
 
         for (Employee employee : employees) {
             if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 result += employee.getSalary();
@@ -69,8 +66,8 @@ public class EmployeeBook {
         Employee employeeResult = null;
 
         for (Employee employee : employees) {
-            if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+            if (employee != null && (employeeResult == null || employee.getSalary() < employeeResult.getSalary())) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 employeeResult = employee;
@@ -78,7 +75,6 @@ public class EmployeeBook {
         }
 
         if (employeeResult != null) {
-
             System.out.println("Сотрудник с минимальной зарплатой в месяц '" + employeeResult.getFio() + "' - " + employeeResult.getSalary() + "р.");
         }
     }
@@ -87,8 +83,8 @@ public class EmployeeBook {
         Employee employeeResult = null;
 
         for (Employee employee : employees) {
-            if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+            if (employee != null && (employeeResult == null || employee.getSalary() > employeeResult.getSalary())) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 employeeResult = employee;
@@ -106,7 +102,7 @@ public class EmployeeBook {
 
         for (Employee employee : employees) {
             if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 totalSalary += employee.getSalary();
@@ -122,7 +118,7 @@ public class EmployeeBook {
     public void getAllEmployeesFio(EmployeeDepartment department) {
         for (Employee employee : employees) {
             if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 System.out.println("Сотрудник - " + employee.getFio());
@@ -130,17 +126,18 @@ public class EmployeeBook {
         }
     }
 
-    public void findEmployeesBySalary(float salary, boolean isMoreOrEquals) {
-        String string = isMoreOrEquals ? "больше или равно" : "меньше";
-
+    public void findEmployeesBySalaryLess(float salary) {
         for (Employee employee : employees) {
-            if (employee != null) {
-                boolean ddd = isMoreOrEquals ? salary <= employee.getSalary() : salary > employee.getSalary();
+            if (employee != null && salary > employee.getSalary()) {
+                System.out.println("У сотрудника '" + employee.getFio() + "' зарплата меньше, чем " + salary + "р.");
+            }
+        }
+    }
 
-
-                if (ddd) {
-                    System.out.println("У сотрудника '" + employee.getFio() + "' зарплата " + string + " чем " + salary + "р.");
-                }
+    public void findEmployeesBySalaryMoreOrEquals(float salary) {
+        for (Employee employee : employees) {
+            if (employee != null && salary <= employee.getSalary()) {
+                System.out.println("У сотрудника '" + employee.getFio() + "' зарплата больше или равно, чем " + salary + "р.");
             }
         }
     }
@@ -148,7 +145,7 @@ public class EmployeeBook {
     public void increaseSalary(float percent, EmployeeDepartment department) {
         for (Employee employee : employees) {
             if (employee != null) {
-                if (department != null && !employee.getDepartment().equals(department)) {
+                if (department != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                     continue;
                 }
                 float salaryModifier = (100 + percent) / 100;
@@ -160,9 +157,9 @@ public class EmployeeBook {
         }
     }
 
-    public void changeEmployeeSalary(float percent, boolean isIncrease, Integer id, String firstName, String middleName, String lastName) {
+    public void changeEmployeeSalary(float percent, boolean isIncrease, String firstName, String middleName, String lastName) {
         for (Employee employee : employees) {
-            if (employee != null && checkEmployee(employee, id, firstName, middleName, lastName)) {
+            if (employee != null && checkEmployee(employee, firstName, middleName, lastName)) {
                 float salaryModifier = (isIncrease ? ((float) 100 + percent) : ((float) 100 - percent)) / 100;
                 String string = isIncrease ? "увеличилась" : "уменьшилась";
                 employee.setSalary(employee.getSalary() * salaryModifier);
@@ -177,9 +174,9 @@ public class EmployeeBook {
         System.out.println("Сотрудник не найден");
     }
 
-    public void changeDepartment(EmployeeDepartment department, Integer id, String firstName, String middleName, String lastName) {
+    public void changeDepartment(EmployeeDepartment department, String firstName, String middleName, String lastName) {
         for (Employee employee : employees) {
-            if (employee != null && checkEmployee(employee, id, firstName, middleName, lastName)) {
+            if (employee != null && checkEmployee(employee, firstName, middleName, lastName)) {
                 employee.setDepartment(department);
 
                 System.out.println("Сотрудник '" + employee.getFio() + "' теперь работает в '" + employee.getDepartment().getName() + "'");
@@ -197,7 +194,7 @@ public class EmployeeBook {
         int departmentEmployees = 0;
 
         for (Employee employee : employees) {
-            if (employee != null && employee.getDepartment() == department) {
+            if (employee != null && (employee.getDepartment() == null || !employee.getDepartment().equals(department))) {
                 ++departmentEmployees;
                 System.out.println("Сотрудник '" + employee.getFio() + "', зарплата" + employee.getSalary() + "р.");
             }
@@ -230,12 +227,11 @@ public class EmployeeBook {
         }
     }
 
-    private boolean checkEmployee(Employee employee, Integer id, String firstName, String middleName, String lastName) {
-        boolean isEqualsId = employee.getId().equals(id);
+    private boolean checkEmployee(Employee employee, String firstName, String middleName, String lastName) {
         boolean isEqualsFirstName = employee.getFirstName().equals(firstName);
         boolean isEqualsMiddleName = employee.getMiddleName().equals(middleName);
         boolean isEqualsLastName = employee.getLastName().equals(lastName);
 
-        return isEqualsId || (isEqualsFirstName && isEqualsMiddleName && isEqualsLastName);
+        return isEqualsFirstName && isEqualsMiddleName && isEqualsLastName;
     }
 }

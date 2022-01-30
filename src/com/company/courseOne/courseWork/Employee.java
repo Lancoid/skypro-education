@@ -1,6 +1,7 @@
 package com.company.courseOne.courseWork;
 
 public class Employee {
+    private static int idCounter = 0;
     private final Integer id;
     private final String firstName;
     private final String middleName;
@@ -8,8 +9,8 @@ public class Employee {
     private EmployeeDepartment department;
     private float salary;
 
-    public Employee(Integer id, String firstName, String middleName, String lastName, EmployeeDepartment department, float salary) {
-        this.id = id;
+    public Employee(String firstName, String middleName, String lastName, EmployeeDepartment department, float salary) {
+        this.id = ++idCounter;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
