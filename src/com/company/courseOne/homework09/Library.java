@@ -1,7 +1,7 @@
 package com.company.courseOne.homework09;
 
 public class Library {
-    Book[] books;
+    private Book[] books;
 
     public Library(int length) {
         books = new Book[length];
