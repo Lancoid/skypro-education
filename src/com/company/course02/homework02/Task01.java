@@ -1,9 +1,11 @@
 package com.company.course02.homework02;
 
-import com.company.course02.homework02.faculty.FacultyGryffindor;
-import com.company.course02.homework02.faculty.FacultyHufflepuff;
-import com.company.course02.homework02.faculty.FacultyRavenclaw;
-import com.company.course02.homework02.faculty.FacultySlytherin;
+import com.company.course02.homework02.faculty.FacultyNames;
+import com.company.course02.homework02.student.GryffindorStudent;
+import com.company.course02.homework02.student.HufflepuffStudent;
+import com.company.course02.homework02.student.RavenclawStudent;
+import com.company.course02.homework02.student.SlytherinStudent;
+import com.company.course02.utilities.NumberGenerator;
 
 /**
  * В школе магии и волшебства Хогвартс есть четыре факультета:
@@ -54,27 +56,23 @@ import com.company.course02.homework02.faculty.FacultySlytherin;
 public class Task01 {
     public static void main(String[] args) {
         Hogwarts hogwarts = new Hogwarts(50);
+        NumberGenerator numberGenerator = new NumberGenerator();
 
-        FacultyGryffindor facultyGryffindor = new FacultyGryffindor();
-        FacultyHufflepuff facultyHufflepuff = new FacultyHufflepuff();
-        FacultyRavenclaw facultyRavenclaw = new FacultyRavenclaw();
-        FacultySlytherin facultySlytherin = new FacultySlytherin();
+        hogwarts.addStudent(new GryffindorStudent("Гарри", "Поттер", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new GryffindorStudent("Гермиона", "Грейнджер", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new GryffindorStudent("Рон", "Уизли", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
 
-        hogwarts.addStudent(new Student("Гарри", "Поттер", facultyGryffindor, 54, 354));
-        hogwarts.addStudent(new Student("Гермиона", "Грейнджер", facultyGryffindor, 78, 1234));
-        hogwarts.addStudent(new Student("Рон", "Уизли", facultyGryffindor, 23, 163));
+        hogwarts.addStudent(new HufflepuffStudent("Захария", "Смит", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new HufflepuffStudent("Седрик", "Диггори", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new HufflepuffStudent("Джастин", "Финч-Флетчли", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
 
-        hogwarts.addStudent(new Student("Захария", "Смит", facultyHufflepuff, 42, 56));
-        hogwarts.addStudent(new Student("Седрик", "Диггори", facultyHufflepuff, 61, 89));
-        hogwarts.addStudent(new Student("Джастин", "Финч-Флетчли", facultyHufflepuff, 38, 32));
+        hogwarts.addStudent(new RavenclawStudent("Чжоу", "Чанг", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new RavenclawStudent("Падма", "Патил", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new RavenclawStudent("Маркус", "Белби", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
 
-        hogwarts.addStudent(new Student("Чжоу", "Чанг", facultyRavenclaw, 39, 49));
-        hogwarts.addStudent(new Student("Падма", "Патил", facultyRavenclaw, 27, 25));
-        hogwarts.addStudent(new Student("Маркус", "Белби", facultyRavenclaw, 12, 11));
-
-        hogwarts.addStudent(new Student("Драко", "Малфой", facultySlytherin, 40, 42));
-        hogwarts.addStudent(new Student("Грэхэм", "Монтегю", facultySlytherin, 21, 18));
-        hogwarts.addStudent(new Student("Грегори", "Гойл", facultySlytherin, 9, 0));
+        hogwarts.addStudent(new SlytherinStudent("Драко", "Малфой", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new SlytherinStudent("Грэхэм", "Монтегю", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
+        hogwarts.addStudent(new SlytherinStudent("Грегори", "Гойл", numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom(), numberGenerator.getRandom()));
 
         System.out.println("-----------------------------------------------------------------------------------------------------------------------");
 
@@ -82,7 +80,7 @@ public class Task01 {
 
         System.out.println("-----------------------------------------------------------------------------------------------------------------------");
 
-        hogwarts.compareTwoStudents(facultyGryffindor);
+        hogwarts.compareTwoStudents(FacultyNames.GRYFFINDOR);
 
         System.out.println("-----------------------------------------------------------------------------------------------------------------------");
 

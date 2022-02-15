@@ -4,13 +4,16 @@ public enum FacultyProperties {
     NOBILITY("благородство"),
     HONOR("честь"),
     BRAVERY("храбрость"),
+
     INDUSTRIOUSNESS("трудолюбие"),
     LOYALTY("верность"),
     HONESTY("честность"),
+
     MIND("ум"),
     WISDOM("мудрость"),
     WIT("остроумие"),
     CREATION("творчество"),
+
     CUNNING("хитрость"),
     DETERMINATION("решительность"),
     AMBITION("амбициозность"),
