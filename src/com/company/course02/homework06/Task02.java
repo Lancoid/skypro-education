@@ -1,8 +1,9 @@
 package com.company.course02.homework06;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Напишите код, с помощью которого можно напечатать только четные числа без повторений в порядке возрастания.
@@ -21,15 +22,13 @@ public class Task02 {
     }
 
     private static void print(List<Integer> numbers, boolean inEven) {
-        List<Integer> temporary = new ArrayList<>();
+        Set<Integer> temporary = new HashSet<>(Set.copyOf(numbers));
 
-        for (Integer number : numbers) {
-            if (number != null && (number % 2 == 0) == inEven && !temporary.contains(number)) {
-                temporary.add(number);
-            }
+        if (inEven) {
+            temporary.removeIf(number -> number % 2 != 0);
+        } else {
+            temporary.removeIf(number -> number % 2 == 0);
         }
-
-        Collections.sort(temporary);
 
         System.out.println(temporary);
     }

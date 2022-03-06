@@ -30,20 +30,10 @@ public class Task03 {
     }
 
     private static void print(List<String> stringList) {
-        Set<String> duplicates = new LinkedHashSet<>();
-        Set<String> uniques = new HashSet<>();
+        Set<String> uniques = new HashSet<>(stringList);
 
-        for (String string : stringList) {
-            if (!uniques.add(string)) {
-                duplicates.add(string);
-            }
-        }
-
-        for (String string : duplicates) {
-            uniques.remove(string);
-        }
+        uniques.removeIf(string -> Collections.frequency(stringList, string) != 1);
 
         System.out.println(uniques);
-
     }
 }
